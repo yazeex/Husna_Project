@@ -31,10 +31,12 @@ export default function HomeScreen() {
   ]);
 
   const openNameDetails = (name: AsmaName) => {
+    console.log('Opening details for:', name.transliteration);
     setSelectedName(name);
   };
 
   const closeNameDetails = () => {
+    console.log('Closing name details');
     setSelectedName(null);
   };
 

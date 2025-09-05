@@ -17,6 +17,8 @@ interface NameDetailModalProps {
 }
 
 export function NameDetailModal({ name, visible, onClose }: NameDetailModalProps) {
+  console.log('NameDetailModal rendered:', { name: name?.transliteration, visible });
+  
   if (!name) return null;
 
   return (
@@ -25,6 +27,7 @@ export function NameDetailModal({ name, visible, onClose }: NameDetailModalProps
       animationType="slide"
       presentationStyle="pageSheet"
       onRequestClose={onClose}
+      transparent={false}
     >
       <View style={styles.container}>
         {/* Header */}
